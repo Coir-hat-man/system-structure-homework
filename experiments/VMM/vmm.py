@@ -18,9 +18,12 @@ from scipy.io import loadmat
 import matplotlib.pyplot as plt
 import click
 import json
+import os
 
- 
+os.chdir(r'C:/Users/lhm/Desktop/system_structure/RANC/simulator/build/Release')
 
+# file_path = r'C:\Users\lhm\AppData\Local\JetBrains\PyCharmCE2022.3\python_stubs\-1611849815\_winapi.py'
+# os.chmod(file_path, os.stat(file_path).st_mode & ~0o222)
 def print_vmm_results(
         matrix, 
         vector, 
@@ -232,20 +235,21 @@ def create_tn_vmm_output(
     with open(config_path, 'w') as f:
         f.write(json.dumps(config, indent = '\t'))
         
-    bash_cmd = '{} -i input.json -o output.txt -c ../simulator/config.json' \
-               ' --ticks {} -r 1'.format(sim_path, num_ticks)
+    bash_cmd = '{} -i C:/Users/lhm/Desktop/system_structure/RANC/simulator/build/Release/input.json -o C:/Users/lhm/Desktop/system_structure/RANC/simulator/build/Release/output.txt -c C:/Users/lhm/Desktop/system_structure/RANC/simulator/config.json' \
+               ' --ticks {} '.format(sim_path, num_ticks)
 
     print("Running simulator...")
+    print("path",bash_cmd.split())
     process = subprocess.Popen(bash_cmd.split(), stdout=subprocess.PIPE)
     output, _ = process.communicate()
-
+    # communicate方法等待子进程完成，并从其标准输出中读取数据。
     try:
         tn_spikes, tn_neuron_output, tn_vector_output = read_vmm_output('output.txt')
         print('Done')
     except Exception as e:
         print("[ERROR] Exception occured when reading vmm output. Dumping info.")
         print("Simulator Output:")
-        print(output.decode('utf-8'))
+        print("output.decode",output.decode('utf-8'))
         print("Exception string:")
         print(e)
         exit(1)
@@ -389,12 +393,13 @@ Defining command line arguments
 @click.option(
     '--sim_path', 
     '-s', 
-    default = '../simulator/build/simulator', 
+    # default = '../simulator/build/simulator',
+    default = 'C:/Users/lhm/Desktop/system_structure/RANC/simulator/build/Release/ranc_sim',
     help = 'Path to the simulator executable')
 @click.option(
     '--config_path', 
     '-c', 
-    default = '../simulator/config.json', 
+    default = 'C:/Users/lhm/Desktop/system_structure/RANC/simulator/config.json',
     help = 'Path to the simulator configuration.json')
 @click.option(
     '--matrix', 

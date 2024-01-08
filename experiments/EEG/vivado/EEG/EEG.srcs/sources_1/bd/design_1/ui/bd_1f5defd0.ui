@@ -1,0 +1,39 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.14516",
+   "Default View_TopLeft":"-204,-362",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x -110 -y -210 -defaultsOSRD
+preplace port rst -pg 1 -lvl 0 -x -110 -y -190 -defaultsOSRD
+preplace port tick_en -pg 1 -lvl 0 -x -110 -y 50 -defaultsOSRD
+preplace port tc_error -pg 1 -lvl 5 -x 1290 -y -200 -defaultsOSRD
+preplace port sch_error -pg 1 -lvl 5 -x 1290 -y -180 -defaultsOSRD
+preplace port pac_error -pg 1 -lvl 5 -x 1290 -y -160 -defaultsOSRD
+preplace port fifo_error -pg 1 -lvl 5 -x 1290 -y -140 -defaultsOSRD
+preplace portBus result -pg 1 -lvl 5 -x 1290 -y -240 -defaultsOSRD
+preplace inst InputRouter_0 -pg 1 -lvl 1 -x 70 -y -180 -defaultsOSRD
+preplace inst RANCNetwork_0 -pg 1 -lvl 3 -x 760 -y -190 -defaultsOSRD
+preplace inst TickGenerator_0 -pg 1 -lvl 1 -x 70 -y 40 -defaultsOSRD
+preplace inst OutcomeCore_0 -pg 1 -lvl 4 -x 1110 -y 10 -defaultsOSRD
+preplace inst AXIStreamPacketBuffer_0 -pg 1 -lvl 2 -x 390 -y -190 -defaultsOSRD
+preplace netloc clk_1 1 0 4 -80 -270 230 -310 560 -310 930
+preplace netloc rst_1 1 0 4 -90 -280 220 -330 550 -300 920
+preplace netloc tick_en_1 1 0 1 N 50
+preplace netloc TickGenerator_0_tick 1 1 3 210 -320 580 -320 950
+preplace netloc InputRouter_0_out_spike 1 1 3 190 -370 N -370 960
+preplace netloc InputRouter_0_out_valid 1 1 3 200 -360 N -360 940
+preplace netloc RANCNetwork_0_packet_out 1 3 2 NJ -240 N
+preplace netloc RANCNetwork_0_token_controller_error 1 3 2 N -200 NJ
+preplace netloc RANCNetwork_0_scheduler_error 1 3 2 N -180 NJ
+preplace netloc RANCNetwork_0_packet_read_error 1 3 2 N -160 NJ
+preplace netloc RANCNetwork_0_fifo_write_error 1 3 2 N -140 NJ
+preplace netloc OutcomeCore_0_fifo_full 1 0 5 -70 -350 NJ -350 NJ -350 NJ -350 1270
+preplace netloc OutcomeCore_0_packet_captured 1 0 5 -60 -340 NJ -340 NJ -340 NJ -340 1260
+preplace netloc AXIStreamPacketBuffer_0_m00_axis 1 2 1 570 -240n
+levelinfo -pg 1 -110 70 390 760 1110 1290
+pagesize -pg 1 -db -bbox -sgen -210 -520 1410 280
+"
+}
+0

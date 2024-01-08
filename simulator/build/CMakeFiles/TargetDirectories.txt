@@ -1,0 +1,3 @@
+C:/Users/lhm/Desktop/体系结构复现/RANC/simulator/build/CMakeFiles/ranc_sim.dir
+C:/Users/lhm/Desktop/体系结构复现/RANC/simulator/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/lhm/Desktop/体系结构复现/RANC/simulator/build/CMakeFiles/ZERO_CHECK.dir

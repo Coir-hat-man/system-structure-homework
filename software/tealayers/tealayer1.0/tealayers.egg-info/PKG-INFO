@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: tealayers
+Version: 0.1
+Summary: Keras layers to use for running TeaLearning networks.
+Home-page: FIXME
+Author: Ruben Purdy
+Author-email: rubenpurdy@email.arizona.edu
+License: MIT
+Classifier: Programming Language :: Python :: 3.6.1

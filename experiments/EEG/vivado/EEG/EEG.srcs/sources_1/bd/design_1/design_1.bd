@@ -1,0 +1,191 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z020clg484-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2"
+    },
+    "design_tree": {
+      "InputRouter_0": "",
+      "RANCNetwork_0": "",
+      "TickGenerator_0": "",
+      "OutcomeCore_0": "",
+      "AXIStreamPacketBuffer_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "1000000"
+          }
+        }
+      },
+      "rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "tick_en": {
+        "type": "ce",
+        "direction": "I"
+      },
+      "result": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "tc_error": {
+        "type": "data",
+        "direction": "O"
+      },
+      "sch_error": {
+        "type": "data",
+        "direction": "O"
+      },
+      "pac_error": {
+        "type": "data",
+        "direction": "O"
+      },
+      "fifo_error": {
+        "type": "data",
+        "direction": "O"
+      }
+    },
+    "components": {
+      "InputRouter_0": {
+        "vlnv": "arizona.edu:user:InputRouter:1.0",
+        "xci_name": "design_1_InputRouter_0_0"
+      },
+      "RANCNetwork_0": {
+        "vlnv": "arizona.edu:user:RANCNetwork:1.0",
+        "xci_name": "design_1_RANCNetwork_0_0"
+      },
+      "TickGenerator_0": {
+        "vlnv": "rcl.arizona.edu:RANC:TickGenerator:1.0",
+        "xci_name": "design_1_TickGenerator_0_0"
+      },
+      "OutcomeCore_0": {
+        "vlnv": "arizona.edu:user:OutcomeCore:1.0",
+        "xci_name": "design_1_OutcomeCore_0_0"
+      },
+      "AXIStreamPacketBuffer_0": {
+        "vlnv": "rcl.arizona.edu:RANC:AXIStreamPacketBuffer:1.0",
+        "xci_name": "design_1_AXIStreamPacketBuffer_0_0"
+      }
+    },
+    "interface_nets": {
+      "AXIStreamPacketBuffer_0_m00_axis": {
+        "interface_ports": [
+          "AXIStreamPacketBuffer_0/m00_axis",
+          "RANCNetwork_0/s00_axis"
+        ]
+      }
+    },
+    "nets": {
+      "clk_1": {
+        "ports": [
+          "clk",
+          "InputRouter_0/clk",
+          "TickGenerator_0/clk",
+          "AXIStreamPacketBuffer_0/clk",
+          "OutcomeCore_0/clk",
+          "RANCNetwork_0/clk",
+          "AXIStreamPacketBuffer_0/m00_axis_aclk",
+          "RANCNetwork_0/s00_axis_aclk",
+          "OutcomeCore_0/m00_axis_aclk"
+        ]
+      },
+      "rst_1": {
+        "ports": [
+          "rst",
+          "InputRouter_0/rst",
+          "AXIStreamPacketBuffer_0/rst",
+          "RANCNetwork_0/rst",
+          "OutcomeCore_0/rst",
+          "AXIStreamPacketBuffer_0/m00_axis_aresetn",
+          "RANCNetwork_0/s00_axis_aresetn",
+          "OutcomeCore_0/m00_axis_aresetn"
+        ]
+      },
+      "tick_en_1": {
+        "ports": [
+          "tick_en",
+          "TickGenerator_0/en"
+        ]
+      },
+      "TickGenerator_0_tick": {
+        "ports": [
+          "TickGenerator_0/tick",
+          "AXIStreamPacketBuffer_0/tick",
+          "RANCNetwork_0/tick",
+          "OutcomeCore_0/tick"
+        ]
+      },
+      "InputRouter_0_out_spike": {
+        "ports": [
+          "InputRouter_0/out_spike",
+          "AXIStreamPacketBuffer_0/packet",
+          "OutcomeCore_0/packet"
+        ]
+      },
+      "InputRouter_0_out_valid": {
+        "ports": [
+          "InputRouter_0/out_valid",
+          "AXIStreamPacketBuffer_0/packet_valid",
+          "OutcomeCore_0/packet_valid"
+        ]
+      },
+      "RANCNetwork_0_packet_out": {
+        "ports": [
+          "RANCNetwork_0/packet_out",
+          "result"
+        ]
+      },
+      "RANCNetwork_0_token_controller_error": {
+        "ports": [
+          "RANCNetwork_0/token_controller_error",
+          "tc_error"
+        ]
+      },
+      "RANCNetwork_0_scheduler_error": {
+        "ports": [
+          "RANCNetwork_0/scheduler_error",
+          "sch_error"
+        ]
+      },
+      "RANCNetwork_0_packet_read_error": {
+        "ports": [
+          "RANCNetwork_0/packet_read_error",
+          "pac_error"
+        ]
+      },
+      "RANCNetwork_0_fifo_write_error": {
+        "ports": [
+          "RANCNetwork_0/fifo_write_error",
+          "fifo_error"
+        ]
+      },
+      "OutcomeCore_0_fifo_full": {
+        "ports": [
+          "OutcomeCore_0/fifo_full",
+          "InputRouter_0/buffer_full"
+        ]
+      },
+      "OutcomeCore_0_packet_captured": {
+        "ports": [
+          "OutcomeCore_0/packet_captured",
+          "InputRouter_0/captured"
+        ]
+      }
+    }
+  }
+}

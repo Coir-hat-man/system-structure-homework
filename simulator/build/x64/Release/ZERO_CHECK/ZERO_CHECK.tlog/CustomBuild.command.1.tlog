@@ -1,0 +1,10 @@
+^C:\USERS\LHM\DESKTOP\体系结构复现\RANC\SIMULATOR\BUILD\CMAKEFILES\E19ADB6BF00714D8AA1C62F2C77B0826\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/lhm/Desktop/体系结构复现/RANC/simulator -BC:/Users/lhm/Desktop/体系结构复现/RANC/simulator/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/lhm/Desktop/体系结构复现/RANC/simulator/build/RANC_Simulator.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

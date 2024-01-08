@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lhm\Desktop\体系结构复现\RANC\simulator\build\CMakeFiles\e19adb6bf00714d8aa1c62f2c77b0826\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E16CF6E5-6BF8-3CE6-967A-4F9F36F4D120}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
